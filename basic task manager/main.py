@@ -27,6 +27,36 @@ str = str(input())
 print(str)
 '''
 
+## Task three overview
+##Json handling
+
+jsonObject = {"key":"value", "key_2":22}
+# print(jsonObject)
+jsonBooks = {
+    "1":"C programming", 
+    "2":"Python programming",
+    "3":"C++ Programming"
+    }
+
+python = jsonBooks['2']
+# print(python)
+
+jsonBooks['4'] = "Dart Programing"
+# print(jsonBooks)
+
+jsonBooks['1'] = "C# Programming"
+print(jsonBooks)
+
+import json
+
+jsonFile = open("tasks.json", "w")
+json.dump(jsonBooks,jsonFile)
+jsonFile.close()
+
+jsonFile = open("tasks.json", "r")
+data = json.load(jsonFile)
+print(data)
+
 
 ##task 1, write 5 names on different lines of a
 ## file. read back the names and output them to
@@ -36,5 +66,6 @@ print(str)
 ## them in a file
 
 ##task 3, get names from the console and store
-## them to a file as a json object
+## them to a file as a json object, read it back
+## and output to console
 
