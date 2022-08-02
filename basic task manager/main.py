@@ -55,6 +55,7 @@ jsonFile.close()
 
 jsonFile = open("tasks.json", "r")
 data = json.load(jsonFile)
+jsonFile.close()
 print(data)
 
 
@@ -68,4 +69,3 @@ print(data)
 ##task 3, get names from the console and store
 ## them to a file as a json object, read it back
 ## and output to console
-
